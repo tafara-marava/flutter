@@ -169,7 +169,7 @@ void main() {
     }
     root.visitChildren(recursiveFinder);
     expect(renderEditable, isNotNull);
-    return renderEditable!;
+    return renderEditable;
   }
 
   List<TextSelectionPoint> globalize(Iterable<TextSelectionPoint> points, RenderBox box) {
@@ -505,7 +505,7 @@ void main() {
 
   testWidgets('Activates the text field when receives semantics focus on Mac, Windows', (WidgetTester tester) async {
     final SemanticsTester semantics = SemanticsTester(tester);
-    final SemanticsOwner semanticsOwner = tester.binding.pipelineOwner.semanticsOwner!;
+    final SemanticsOwner semanticsOwner = tester.binding.pipelineOwner.semanticsOwner;
     final FocusNode focusNode = FocusNode();
     addTearDown(focusNode.dispose);
     await tester.pumpWidget(
@@ -10283,7 +10283,7 @@ void main() {
 
   testWidgets('when enabled listens to onFocus events and gains focus', (WidgetTester tester) async {
     final SemanticsTester semantics = SemanticsTester(tester);
-    final SemanticsOwner semanticsOwner = tester.binding.pipelineOwner.semanticsOwner!;
+    final SemanticsOwner semanticsOwner = tester.binding.pipelineOwner.semanticsOwner;
     final FocusNode focusNode = FocusNode();
     addTearDown(focusNode.dispose);
     await tester.pumpWidget(
@@ -10340,7 +10340,7 @@ void main() {
 
   testWidgets('when disabled does not listen to onFocus events or gain focus', (WidgetTester tester) async {
     final SemanticsTester semantics = SemanticsTester(tester);
-    final SemanticsOwner semanticsOwner = tester.binding.pipelineOwner.semanticsOwner!;
+    final SemanticsOwner semanticsOwner = tester.binding.pipelineOwner.semanticsOwner;
     final FocusNode focusNode = FocusNode();
     addTearDown(focusNode.dispose);
     await tester.pumpWidget(
@@ -10395,7 +10395,7 @@ void main() {
 
   testWidgets('when receives SemanticsAction.focus while already focused, shows keyboard', (WidgetTester tester) async {
     final SemanticsTester semantics = SemanticsTester(tester);
-    final SemanticsOwner semanticsOwner = tester.binding.pipelineOwner.semanticsOwner!;
+    final SemanticsOwner semanticsOwner = tester.binding.pipelineOwner.semanticsOwner;
     final FocusNode focusNode = FocusNode();
     addTearDown(focusNode.dispose);
     await tester.pumpWidget(
@@ -10418,7 +10418,7 @@ void main() {
 
   testWidgets('when receives SemanticsAction.focus while focused but read-only, does not show keyboard', (WidgetTester tester) async {
     final SemanticsTester semantics = SemanticsTester(tester);
-    final SemanticsOwner semanticsOwner = tester.binding.pipelineOwner.semanticsOwner!;
+    final SemanticsOwner semanticsOwner = tester.binding.pipelineOwner.semanticsOwner;
     final FocusNode focusNode = FocusNode();
     addTearDown(focusNode.dispose);
     await tester.pumpWidget(

@@ -916,7 +916,7 @@ class _CupertinoActionSheetState extends State<CupertinoActionSheet> {
       child: _ActionSheetButtonBackground(
         isCancel: true,
         onPressStateChange: (_) {},
-        child: widget.cancelButton!,
+        child: widget.cancelButton,
       ),
     );
   }

@@ -1761,7 +1761,7 @@ class _MatchAnythingExceptClip extends _FailWithDescriptionMatcher {
     if (nodes.length != 1) {
       return failWithDescription(matchState, 'did not have a exactly one child element');
     }
-    final RenderObject renderObject = nodes.single.renderObject!;
+    final RenderObject renderObject = nodes.single.renderObject;
 
     switch (renderObject.runtimeType) {
       case const (RenderClipPath):
@@ -1792,7 +1792,7 @@ abstract class _MatchRenderObject<M extends RenderObject, T extends RenderObject
     if (nodes.length != 1) {
       return failWithDescription(matchState, 'did not have a exactly one child element');
     }
-    final RenderObject renderObject = nodes.single.renderObject!;
+    final RenderObject renderObject = nodes.single.renderObject;
 
     if (renderObject.runtimeType == T) {
       return renderObjectMatchesT(matchState, renderObject as T);
@@ -1841,7 +1841,7 @@ class _RendersOnPhysicalModel extends _MatchRenderObject<RenderPhysicalShape, Re
     }
     final ShapeBorderClipper shapeClipper = renderObject.clipper! as ShapeBorderClipper;
 
-    if (borderRadius != null && !assertRoundedRectangle(shapeClipper, borderRadius!, matchState)) {
+    if (borderRadius != null && !assertRoundedRectangle(shapeClipper, borderRadius, matchState)) {
       return false;
     }
 
@@ -2649,7 +2649,7 @@ class _MatchesSemanticsData extends Matcher {
     }
     if (customActions != null || hintOverrides != null) {
       final List<CustomSemanticsAction> providedCustomActions = data.customSemanticsActionIds?.map<CustomSemanticsAction>((int id) {
-        return CustomSemanticsAction.getAction(id)!;
+        return CustomSemanticsAction.getAction(id);
       }).toList() ?? <CustomSemanticsAction>[];
       final List<CustomSemanticsAction> expectedCustomActions = customActions?.toList() ?? <CustomSemanticsAction>[];
       if (hintOverrides?.onTapHint != null) {

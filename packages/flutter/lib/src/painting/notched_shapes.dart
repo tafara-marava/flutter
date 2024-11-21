@@ -7,7 +7,6 @@ library;
 
 import 'dart:math' as math;
 
-import 'basic_types.dart';
 import 'borders.dart';
 
 /// A shape with a notch in its outline.

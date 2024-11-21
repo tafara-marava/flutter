@@ -734,14 +734,14 @@ class _DropdownMenuState<T> extends State<DropdownMenu<T>> {
 
     if (_enableFilter) {
       filteredEntries = widget.filterCallback?.call(filteredEntries, _localTextEditingController!.text)
-        ?? filter(widget.dropdownMenuEntries, _localTextEditingController!);
+        ?? filter(widget.dropdownMenuEntries, _localTextEditingController);
     }
 
     if (widget.enableSearch) {
       if (widget.searchCallback != null) {
         currentHighlight = widget.searchCallback!.call(filteredEntries, _localTextEditingController!.text);
       } else {
-        currentHighlight = search(filteredEntries, _localTextEditingController!);
+        currentHighlight = search(filteredEntries, _localTextEditingController);
       }
       if (currentHighlight != null) {
         scrollToHighlight();

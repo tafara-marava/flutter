@@ -582,7 +582,7 @@ class SemanticsTester {
     if (ancestor != null) {
       visit(ancestor);
     } else {
-      visit(tester.binding.pipelineOwner.semanticsOwner!.rootSemanticsNode!);
+      visit(tester.binding.pipelineOwner.semanticsOwner!.rootSemanticsNode);
     }
     return result;
   }

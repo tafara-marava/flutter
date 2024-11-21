@@ -20,7 +20,6 @@ import 'binding.dart';
 import 'constants.dart';
 import 'debug.dart';
 import 'events.dart';
-import 'pointer_router.dart';
 import 'team.dart';
 
 export 'dart:ui' show Offset, PointerDeviceKind;
